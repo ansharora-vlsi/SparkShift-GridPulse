@@ -66,7 +66,7 @@ st.subheader("Real-Time Capacity vs. Load Analysis")
 
 # Generate simulated time-series data
 t_data = pd.DataFrame({
-    'Time': pd.date_range(datetime.now(), periods=20, freq='H'),
+    'Time': pd.date_range(datetime.now(), periods=20, freq='h'),
     'Static_Limit': [800] * 20,
     'DLR_Limit': [dlr_cap + np.random.randint(-50, 50) for _ in range(20)],
     'Actual_Load': [load_amps + np.random.randint(-30, 30) for _ in range(20)]
